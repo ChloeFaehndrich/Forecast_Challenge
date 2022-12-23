@@ -193,7 +193,7 @@ temp_lm_forecast %>%
 ## Convert to EFI standard for submission
 
 temp_lm_forecast_EFI <- temp_lm_forecast %>%
-  mutate(model_id = 'GLEON_Chloe_precip',
+  mutate(model_id = 'precip_mod',
          reference_datetime = as_date(min(datetime)) - days(1),
          family = 'ensemble',
          parameter = as.character(parameter)) %>%
