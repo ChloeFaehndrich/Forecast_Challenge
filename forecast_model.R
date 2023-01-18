@@ -1,7 +1,7 @@
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse) # install.packages('tidyverse'), collection of R packages for data manipulation, analysis and visualisation
 library(lubridate)
-
+source(ignore_sigpipe.R)
 #read in the targets data
 targets <- read_csv('https://data.ecoforecast.org/neon4cast-targets/aquatics/aquatics-targets.csv.gz')
 
@@ -214,4 +214,4 @@ neon4cast::forecast_output_validator(forecast_file_1)
 
 # can uses the neon4cast::forecast_output_validator() to check the forecast is in the right format
 neon4cast::submit(forecast_file = forecast_file_1,
-                  ask = TRUE) # if ask = T (default), it will produce a pop-up box asking if you want to submit
+                  ask = FALSE) # if ask = T (default), it will produce a pop-up box asking if you want to submit
