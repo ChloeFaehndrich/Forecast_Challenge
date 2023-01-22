@@ -1,7 +1,7 @@
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse) # install.packages('tidyverse'), collection of R packages for data manipulation, analysis and visualisation
 library(lubridate)
-source(ignore_sigpipe.R)
+source('ignore_sigpipe.R')
 #read in the targets data
 targets <- read_csv('https://data.ecoforecast.org/neon4cast-targets/aquatics/aquatics-targets.csv.gz')
 
